@@ -1,5 +1,7 @@
 # test_stripe_api
 
+Dans le fichier stripe_test.py : fonction python seule 
+
 liens : http://127.0.0.1:8000/api/v1/customer-info/bopha@b-consultant.fr/
 http://127.0.0.1:8000/api/v1/customer-products/bopha@b-consultant.fr/
 http://127.0.0.1:8000/api/v1/customer-since/bopha@b-consultant.fr/
