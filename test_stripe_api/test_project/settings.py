@@ -1,32 +1,32 @@
-# settings.py
+
 
 import environ
 from pathlib import Path
 
-# Définir la base du répertoire du projet
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Initialiser l'instance environ
+
 env = environ.Env(
     # définir les valeurs par défaut et les types attendus
     DEBUG=(bool, False)
 )
 
-# Lire le fichier .env
+
 environ.Env.read_env(env_file=str(BASE_DIR / '.env'))
 
-# Utiliser les variables d'environnement
+
 SECRET_KEY = env('SECRET_KEY', default='your-default-secret-key')
 DEBUG = env('DEBUG', default=False)
 
-# Ajouter la clé API Stripe
+
 STRIPE_API_KEY = env('STRIPE_API_KEY', default='Not Set')
 
-print(f"STRIPE_API_KEY: {STRIPE_API_KEY}")  # Pour vérifier si la clé est lue correctement
+print(f"STRIPE_API_KEY: {STRIPE_API_KEY}")  
 
-# Les autres configurations restent inchangées
 
-# Application definition
+
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -91,7 +91,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-# Internationalization
+
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
